@@ -3,9 +3,10 @@ export default function List() {
   return (
     <div>
       <h4 className="title">상품목록</h4>
-      {상품.map((a) => {
+      {상품.map((a, i) => {
         return (
-          <div className="food">
+          <div className="food" key={i}>
+            <img src={`/food${i}.png`} width="200" height="200" />
             <h4>{a} $40</h4>
           </div>
         );
